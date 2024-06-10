@@ -1,5 +1,5 @@
 {
-	"name": "toastnz/silverstripe-gridfieldversionedorderablerows",
+	"name": "fromholdio/silverstripe-gridfieldversionedorderablerows",
 	"description": "Allows Versioned Orderable Rows In GridField",
 	"type": "silverstripe-vendormodule",
 	"license": "MIT",
