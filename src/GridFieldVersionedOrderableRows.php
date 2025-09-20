@@ -14,11 +14,11 @@ class GridFieldVersionedOrderableRows extends GridFieldOrderableRows
     /**
      * @param       $list
      * @param array $values
-     * @param array $order
+     * @param array $sortedIDs
      *
      * @throws \Exception
      */
-    protected function reorderItems($list, array $values, array $order)
+    protected function reorderItems($list, array $values, array $sortedIDs)
     {
         // Get a list of sort values that can be used.
         $pool = array_values($values);
@@ -29,7 +29,7 @@ class GridFieldVersionedOrderableRows extends GridFieldOrderableRows
 
         // Loop through each item, and update the sort values which do not
         // match to order the objects.
-        foreach (array_values($order) as $pos => $id) {
+        foreach (array_values($sortedIDs) as $pos => $id) {
             if ($values[$id] != $pool[$pos]) {
                 $where = $this->getSortTableClauseForIds($list, $id);
                 DB::query(
